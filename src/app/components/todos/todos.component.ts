@@ -39,12 +39,20 @@ export class TodosComponent implements OnInit {
   }
 
   addTodo(){
+    if(this.inputTodo.length == 0){
+      alert('Enter some text');
+      this.inputTodo = "";
+      
+    }
     this.todos.push({
       content: this.inputTodo,
       completed: false
     })
+   
+
 
     this.inputTodo = "";
+  
   }
 
 
